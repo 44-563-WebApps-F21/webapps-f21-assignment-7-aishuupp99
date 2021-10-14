@@ -60,6 +60,17 @@
             }
           }, (randomInt - 1) * 1000)
         }
+        function Time() {
+            var element = document.getElementById("target")
+            if (myTime == undefined)
+                element.innerHTML = "Too Slow"
+            else {
+                var buttonTime = Date.now()
+                var diff = buttonTime - myTime
+                element.innerHTML = "Time was " + diff
+            }
+
+        }
     
       </script>
 </body>

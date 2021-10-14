@@ -21,6 +21,10 @@
     <div class="col-sm-3" id="distance" style="background-color:pink;">Distance is unknown </div>
   </div>
 </div><br>
+<div class="btn btn-info text-center mb-5" onclick="startnewgame()">Reset</div>
+    </div>
+    <br>
+    <br>
 <div class="container">
     <div class="row">
         <div class="col-sm-2 "><img src="banana.jpg" id="i1" onclick="check(0)" class="rounded img-fluid" alt="plant"></div>
@@ -112,6 +116,19 @@ var column = Math.abs(m1 - m2);
 return row + column - 1;
 
 }
+function startnewgame() {
+            triesCount = 0;
+            low = 0;
+            high = 23;
+            animalLocation = Math.round(Math.random() * (high - low) + low);
+            document.getElementById("tries").innerHTML = "Number of tries is zero";
+            AnimalDistance = "unknown"
+            document.getElementById("distance").innerHTML = "Distance is " + AnimalDistance;
+            for (var i = 0; i < 24; i++) {
+                document.getElementById(ids[i]).src = "banana.jpg";
+            }
+        }
+
 
     
     
